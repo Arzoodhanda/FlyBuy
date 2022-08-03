@@ -11,12 +11,17 @@
   font-family: "Akaya Kanadaka", cursive;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   background-color: white;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-#header {
+.header {
   display: flex;
   height: 3rem;
   align-items: center;
@@ -29,13 +34,13 @@ body {
   top: 0px;
 }
 
-#navbar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#navbar li {
+.navbar li {
   list-style: none;
   padding: 0 20px;
   display: flex;
@@ -43,15 +48,15 @@ body {
   align-items: center;
 }
 
-#navbar li a {
+.navbar li a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   color: black;
   transition: 0.3s ease;
 }
 
-#navbar li a:hover {
+.navbar li a:hover {
     color: seagreen;
 }
 
@@ -83,7 +88,6 @@ body {
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
   color: seagreen;
 }
 
@@ -131,4 +135,75 @@ body {
 
 div a {
   cursor: pointer;
+  overflow: hidden;
+}
+
+.mobile-nav {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav i {
+  padding: 0.1rem 0.4rem;
+}
+
+.mobile-nav i[name='cross'] {
+  display: none;
+}
+
+@media (max-width: 38em) {
+  .mobile-nav {
+    display: inline-block;
+    z-index: 1;
+    border: 3px solid #212529;
+    border-radius: .3rem;
+  }
+
+  .navbar {
+    width: 100%;
+    height: 100vh;
+    background-color: #e7f5ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .navbar li {
+    margin: 1rem;
+  }
+
+  .header {
+    position: relative;
+    z-index: 999;
+    /* border: 3px solid #212529; */
+    color: #212529;
+  }
+
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .active .mobile-nav i[name='bars'] {
+    display: none;
+  }
+  
+  .active .mobile-nav i[name='cross'] {
+    display: block;
+  }
 }

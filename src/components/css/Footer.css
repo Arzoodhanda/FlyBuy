@@ -123,6 +123,25 @@
 }
 
 /*responsive*/
+@media (max-width: 36em) {
+  #newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #newsletter input{
+    width: 18rem;
+    border-radius: 4px;
+  }
+  #newsletter button {
+    top: 45%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+  }
+}
+
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
