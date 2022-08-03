@@ -1,0 +1,149 @@
+#newsletter {
+  background-image: url(/public/images/image5.jpg);
+  margin-top: 50px;
+  padding: 20px 40px 20px 40px;
+  height: 30vh;
+  background-size: cover;
+  /* background-position-y: 40px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#newsletter h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#newsletter p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f9f9f9;
+}
+
+#newsletter p span {
+  font-size: 15px;
+  font-weight: 600;
+  color: deeppink;
+}
+
+#newsletter input {
+  outline: none;
+  border: none;
+  background: white;
+  color: grey;
+  height: 1px;
+  width: 25rem;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newsletter button {
+  background-color: seagreen;
+  border: 1px solid transparent;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 8.5px 20px;
+  color: white;
+  outline: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.footer {
+  background-color: white;
+  padding: 70px 0;
+  display: block;
+  width: 100%;
+}
+.footer-col {
+  /* width: 18%; */
+  /* max-width: 28vh; */
+  padding: 0 1rem;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h2 {
+  font-size: 15px;
+  color: whitesmoke;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  display: inline;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: grey;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: black;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: black;
+  background-color: grey;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+    padding: 0 40px;
+}
+}
+@media (max-width: 57px) {
+    .footer-col {
+    max-width: 100%;
+    margin-bottom: 10px;
+    width: 30%;
+  }
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+  padding: 0 0 0 1rem;
+}
