@@ -9,6 +9,7 @@ import {
 import Footer from './components/Footer';
 import Shop from './components/Shop';
 import Blog from './components/Blog';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Navbar/>
       <div className='container'>
       <Routes>
-          <Route exact path="/"/>
+          <Route exact path="/" element={<Home/>}/>
           <Route exact path="/shop" element={<Shop/>}/>
           <Route exact path="/blog" element={<Blog/>}/>
           <Route exact path="/about" element={<About/>}/>

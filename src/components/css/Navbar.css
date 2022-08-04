@@ -11,7 +11,7 @@
   font-family: "Akaya Kanadaka", cursive;
 }
 
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -57,16 +57,18 @@ body {
 }
 
 .navbar li a:hover {
-    color: seagreen;
+  color: seagreen;
 }
 
 .logo {
-    cursor: pointer;
+  cursor: pointer;
 }
 .navbar-title {
-    font-size: 1.7rem;
-    text-decoration: none;
-    margin-left: 1rem;
+  font-family: "Radio Canada", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 1rem;
 }
 
 .dropdown {
@@ -87,7 +89,8 @@ body {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   color: seagreen;
 }
 
@@ -95,10 +98,11 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
+  border: 2px solid black;
   border-radius: 15px;
   background-color: #f9f9f9;
   /* min-width: 160px; */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -137,18 +141,15 @@ div a {
   cursor: pointer;
   overflow: hidden;
 }
-
 .mobile-nav {
   display: none;
   background: transparent;
   cursor: pointer;
 }
-
 .mobile-nav i {
   padding: 0.1rem 0.4rem;
 }
-
-.mobile-nav i[name='cross'] {
+.mobile-nav i[name="cross"] {
   display: none;
 }
 
@@ -157,9 +158,8 @@ div a {
     display: inline-block;
     z-index: 1;
     border: 3px solid #212529;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
   }
-
   .navbar {
     width: 100%;
     height: 100vh;
@@ -180,30 +180,24 @@ div a {
     visibility: hidden;
     pointer-events: none;
   }
-
   .navbar li {
     margin: 1rem;
   }
-
   .header {
     position: relative;
     z-index: 999;
-    /* border: 3px solid #212529; */
     color: #212529;
   }
-
   .active .navbar {
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
-  
-  .active .mobile-nav i[name='bars'] {
+  .active .mobile-nav i[name="bars"] {
     display: none;
   }
-  
-  .active .mobile-nav i[name='cross'] {
+  .active .mobile-nav i[name="cross"] {
     display: block;
   }
 }
