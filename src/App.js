@@ -5,11 +5,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  // Redirect
 } from "react-router-dom";
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Shop from './components/Shop';
 import Blog from './components/Blog';
 import Home from './components/Home';
+import Wishlist from './components/Wishlist';
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
           <Route exact path="/shop" element={<Shop/>}/>
           <Route exact path="/blog" element={<Blog/>}/>
           <Route exact path="/about" element={<About/>}/>
+          <Route exact path="/wishlist" element={<Wishlist/>}/>
+          <Route path="*" element={<Home/>}/>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
       </div>
     </Router>
     </>

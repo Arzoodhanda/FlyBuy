@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./css/home.css";
 import "./css/spinner.css";
+import Spinner from "./Spinner";
+import Wishlist from "./Wishlist";
 
 export default function Home() {
-    // const [spinner, setSpinner] = useState(1)
   useEffect(() => {
     // const timer = setTimeout(() => {
     //     console.log('UseEffect running!')
     //   }, 100);
-    console.log(allCards);
+    // console.log(allCards);
     initCards();
-  });
+    fetchUrl();
+  }, []);
+
+  const [loading, setLoading] = useState(true)
+  const array = []
 
   const allCards = document.querySelectorAll(".tinder--card");
 
@@ -48,19 +53,27 @@ export default function Home() {
       if (love) {
         card.style.transform =
           "translate(" + moveOutWidth + "px, -100px) rotate(-30deg)";
+          let arr = card.innerHTML.split(" ")
+          let splt = arr[1].split('src=')
+          // console.log(arr[1])
+          // console.log(splt[1])
+          // cardUrl(splt[1])
       } else {
         card.style.transform =
           "translate(-" + moveOutWidth + "px, -100px) rotate(30deg)";
       }
       initCards();
-      event.preventDefault();
+      // event.preventDefault();
     };
   }
   let nopeListener = createButtonListener(false);
   let loveListener = createButtonListener(true);
 
+  let addToCart = ()=>{
+    // document.querySelector('.tinder').
+  }
 //   if(spinner===1){
-//     document.body.innerHTML="<div class='lds-roller'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>";
+//     document.body.innerHTML="<div className='lds-roller'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>";
 //     const timer = setTimeout(() => {
 //         console.log('This will run after 2 second!')
 //         setSpinner(0);
@@ -70,9 +83,29 @@ export default function Home() {
 //       console.log('This will run after 3 second!')
 //     document.body.innerHTML="<h1>hi</h1>";
 //   }
+async function fetchUrl(){
+    let imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,laptops')
+    array.push(imgResponse.url)
+    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,accessories')
+    array.push(imgResponse.url)
+    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,headphones')
+    array.push(imgResponse.url)
+    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,mobile')
+    array.push(imgResponse.url)
+    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,pc')
+    array.push(imgResponse.url)
+    // console.log(imgResponse.url)
+    console.log(array[0])
+    console.log(array[1])
+    console.log(array[2])
+    console.log(array[3])
+    console.log(array[4])
+    setLoading(false)
+}
 
   return (
     <>
+    {/* <Alert/> */}
       <div className="tinder">
         <div className="tinder--cards">
           <div className="tinder--card">
@@ -80,7 +113,7 @@ export default function Home() {
               src="https://source.unsplash.com/600x300/?electronics,laptops"
               alt="card"
             />
-            <h3>Card 1</h3>
+            <h3>Laptops</h3>
             <p>This is a Tinder wala swipe card.</p>
           </div>
 
@@ -89,7 +122,7 @@ export default function Home() {
               src="https://source.unsplash.com/600x300/?electronics,accessories"
               alt="card"
             />
-            <h3>Card 2</h3>
+            <h3>Accessories</h3>
             <p>This is a demo for Tinder like swipe cards</p>
           </div>
 
@@ -98,7 +131,7 @@ export default function Home() {
               src="https://source.unsplash.com/600x300/?electronics,headphones"
               alt="card"
             />
-            <h3>Card 3</h3>
+            <h3>Headphones</h3>
             <p>This is a demo for Tinder like swipe cards</p>
           </div>
 
@@ -107,7 +140,7 @@ export default function Home() {
               src="https://source.unsplash.com/600x300/?electronics,mobile"
               alt="card"
             />
-            <h3>Card 4</h3>
+            <h3>Mobile</h3>
             <p>This is a demo for Tinder like swipe cards</p>
           </div>
 
@@ -117,24 +150,14 @@ export default function Home() {
             //   {let loading = await fetch(src);}
               alt="card"
             />
-            <h3>Card 5</h3>
+            <h3>Pc's</h3>
             <p>This is a demo for Tinder like swipe cards</p>
           </div>
         </div>
-        {/* spinner */}
-        {/* <div class="lds-roller">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div> */}
+        <Spinner loading={loading}/>
 
         <div className="tinder--buttons">
-          <button id="shop-cart" title="Add to Cart">
+          <button id="shop-cart" title="Add to Cart" onClick={()=>{addToCart();}}>
             <i className="uil uil-shopping-cart-alt"></i>
           </button>
           <button

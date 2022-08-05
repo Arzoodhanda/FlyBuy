@@ -32,15 +32,15 @@ export default function Navbar() {
               <li><Link to="/shop" onClick={navClick}>Shop </Link></li>
               <li><Link to="/blog" onClick={navClick}>Blog </Link></li>
               <li><Link to="/about" onClick={navClick}>About Us</Link></li>
-              <div class="dropdown">
-                <li id='profile'><Link to="/" title='User'><i class="fa-solid fa-user"></i></Link></li>
-                <div class="dropdown-content">
+              <div className="dropdown">
+                <li id='profile' title='User'><i className="fa-solid fa-user"></i></li>
+                <div className="dropdown-content">
                   <Profile/>
                   <LoginButton/>
                   <LogoutButton/>
                 </div>
               </div>
-              <li><Link to="/" title='Wishlist' onClick={navClick}><i class="fa-solid fa-heart"></i></Link></li>
+              <li><Link to="/wishlist" title='Wishlist' onClick={navClick}><i className="fa-solid fa-heart"></i></Link></li>
               <li><Link to="/" title='Add to Cart' onClick={navClick}><i className="fa-solid fa-cart-shopping"></i></Link></li>
             </ul>
 

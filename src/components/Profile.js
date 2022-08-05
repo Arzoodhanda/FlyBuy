@@ -16,7 +16,7 @@ export const Profile = () => {
 ||
     !isAuthenticated && (
         <>
-        <img src="images/user.png" alt="anonymous" />
+        <img src="images/user-1.png" alt="anonymous" />
         <h2>Guest user</h2>
         </>
     )
