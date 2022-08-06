@@ -2,20 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./css/home.css";
 import "./css/spinner.css";
 import Spinner from "./Spinner";
-import Wishlist from "./Wishlist";
+
+export const array = [];
+export const wishlistArr = [];
 
 export default function Home() {
   useEffect(() => {
-    // const timer = setTimeout(() => {
-    //     console.log('UseEffect running!')
-    //   }, 100);
-    // console.log(allCards);
     initCards();
     fetchUrl();
   }, []);
 
-  const [loading, setLoading] = useState(true)
-  const array = []
+  const [loading, setLoading] = useState(true);
 
   const allCards = document.querySelectorAll(".tinder--card");
 
@@ -39,6 +36,26 @@ export default function Home() {
 
       if (!cards.length) return false;
 
+      let card = cards[0];
+      card.classList.add("removed");
+      
+      if (love) {
+        card.style.transform =
+        "translate(" + moveOutWidth + "px, -100px) rotate(-30deg)";
+        // let arr = card.innerHTML.split(" ");
+        let index = Math.abs(cards.length - 5);
+        console.log(Math.abs(cards.length - 5));
+        wishlistArr.push(array[index]);
+        console.log(wishlistArr)
+        // let splt = arr[1].split('src=')
+        // console.log(card)
+        // console.log(arr[1])
+        // console.log(splt[1])
+        // cardUrl(splt[1])
+      } else {
+        card.style.transform =
+        "translate(-" + moveOutWidth + "px, -100px) rotate(30deg)";
+      }
       if (cards.length === 1) {
         console.log("cards finished");
         document.getElementById("shop-cart").remove();
@@ -47,21 +64,6 @@ export default function Home() {
         document.getElementById("info").remove();
         window.location.reload(true);
       }
-      let card = cards[0];
-      card.classList.add("removed");
-
-      if (love) {
-        card.style.transform =
-          "translate(" + moveOutWidth + "px, -100px) rotate(-30deg)";
-          let arr = card.innerHTML.split(" ")
-          let splt = arr[1].split('src=')
-          // console.log(arr[1])
-          // console.log(splt[1])
-          // cardUrl(splt[1])
-      } else {
-        card.style.transform =
-          "translate(-" + moveOutWidth + "px, -100px) rotate(30deg)";
-      }
       initCards();
       // event.preventDefault();
     };
@@ -69,95 +71,141 @@ export default function Home() {
   let nopeListener = createButtonListener(false);
   let loveListener = createButtonListener(true);
 
-  let addToCart = ()=>{
-    // document.querySelector('.tinder').
+  async function fetchUrl() {
+    let imgResponse = await fetch(
+      "https://source.unsplash.com/600x300/?electronics,laptops"
+    );
+    array.push(imgResponse.url);
+    imgResponse = await fetch(
+      "https://source.unsplash.com/600x300/?electronics,accessories"
+    );
+    array.push(imgResponse.url);
+    imgResponse = await fetch(
+      "https://source.unsplash.com/600x300/?electronics,headphones"
+    );
+    array.push(imgResponse.url);
+    imgResponse = await fetch(
+      "https://source.unsplash.com/600x300/?electronics,mobile"
+    );
+    array.push(imgResponse.url);
+    imgResponse = await fetch(
+      "https://source.unsplash.com/600x300/?electronics,pc"
+    );
+    array.push(imgResponse.url);
+    // console.log(array[0])
+    // console.log(array[1])
+    // console.log(array[2])
+    // console.log(array[3])
+    // console.log(array[4])
+    setLoading(false);
   }
-//   if(spinner===1){
-//     document.body.innerHTML="<div className='lds-roller'><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>";
-//     const timer = setTimeout(() => {
-//         console.log('This will run after 2 second!')
-//         setSpinner(0);
-//     }, 2000);
-// }
-// if(spinner===0){
-//       console.log('This will run after 3 second!')
-//     document.body.innerHTML="<h1>hi</h1>";
-//   }
-async function fetchUrl(){
-    let imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,laptops')
-    array.push(imgResponse.url)
-    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,accessories')
-    array.push(imgResponse.url)
-    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,headphones')
-    array.push(imgResponse.url)
-    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,mobile')
-    array.push(imgResponse.url)
-    imgResponse = await fetch('https://source.unsplash.com/600x300/?electronics,pc')
-    array.push(imgResponse.url)
-    // console.log(imgResponse.url)
-    console.log(array[0])
-    console.log(array[1])
-    console.log(array[2])
-    console.log(array[3])
-    console.log(array[4])
-    setLoading(false)
-}
 
   return (
     <>
-    {/* <Alert/> */}
+      {/* <Alert/> */}
       <div className="tinder">
         <div className="tinder--cards">
           <div className="tinder--card">
             <img
-              src="https://source.unsplash.com/600x300/?electronics,laptops"
+              src={array[0]}
               alt="card"
             />
-            <h3>Laptops</h3>
-            <p>This is a Tinder wala swipe card.</p>
+            <h3>Product Name</h3>
+            <p>Product's description will be written here.</p>
+            <div className="product-info">
+              <li className="price">&#8377; 45000</li>
+              <li id="avail">
+                <i class="fa-solid fa-share"></i>
+              </li>
+              <li id="avail">
+                <i class="fa-solid fa-location-dot"></i> Deliverable
+              </li>
+            </div>
           </div>
 
           <div className="tinder--card">
             <img
-              src="https://source.unsplash.com/600x300/?electronics,accessories"
+              src={array[1]}
               alt="card"
             />
-            <h3>Accessories</h3>
-            <p>This is a demo for Tinder like swipe cards</p>
+            <h3>Product Name</h3>
+            <p>Product's description will be written here.</p>
+            <div className="product-info">
+              <li className="price">&#8377; 45000</li>
+              <li id="avail">
+                <i class="fa-solid fa-share"></i>
+              </li>
+              <li id="avail">
+                <i class="fa-solid fa-location-dot"></i> Deliverable
+              </li>
+            </div>
           </div>
 
           <div className="tinder--card">
             <img
-              src="https://source.unsplash.com/600x300/?electronics,headphones"
+              src={array[2]}
               alt="card"
             />
-            <h3>Headphones</h3>
-            <p>This is a demo for Tinder like swipe cards</p>
+            <h3>Product Name</h3>
+            <p>Product's description will be written here.</p>
+            <div className="product-info">
+              <li className="price">&#8377; 45000</li>
+              <li id="avail">
+                <i class="fa-solid fa-share"></i>
+              </li>
+              <li id="avail">
+                <i class="fa-solid fa-location-dot"></i> Deliverable
+              </li>
+            </div>
           </div>
 
           <div className="tinder--card">
             <img
-              src="https://source.unsplash.com/600x300/?electronics,mobile"
+              src={array[3]}
               alt="card"
             />
-            <h3>Mobile</h3>
-            <p>This is a demo for Tinder like swipe cards</p>
+            <h3>Product Name</h3>
+            <p>Product's description will be written here.</p>
+            <div className="product-info">
+              <li className="price">&#8377; 45000</li>
+              <li id="avail">
+                <i class="fa-solid fa-share"></i>
+              </li>
+              <li id="avail">
+                <i class="fa-solid fa-location-dot"></i> Deliverable
+              </li>
+            </div>
           </div>
 
           <div className="tinder--card">
             <img
-              src="https://source.unsplash.com/600x300/?electronics,pc"
-            //   {let loading = await fetch(src);}
+              src={array[4]}
               alt="card"
             />
-            <h3>Pc's</h3>
-            <p>This is a demo for Tinder like swipe cards</p>
+            <h3>Product Name</h3>
+            <p>Product's description will be written here.</p>
+            <div className="product-info">
+              <li className="price">&#8377; 45000</li>
+              <li id="avail">
+                <i class="fa-solid fa-share"></i>
+              </li>
+              <li id="avail">
+                <i class="fa-solid fa-location-dot"></i> Deliverable
+              </li>
+            </div>
           </div>
         </div>
-        <Spinner loading={loading}/>
+
+        <Spinner loading={loading} />
 
         <div className="tinder--buttons">
-          <button id="shop-cart" title="Add to Cart" onClick={()=>{addToCart();}}>
+          <button
+            id="shop-cart"
+            title="Add to Cart"
+            onClick={() => {
+              // addToCart();
+            }}
+          >
             <i className="uil uil-shopping-cart-alt"></i>
           </button>
           <button

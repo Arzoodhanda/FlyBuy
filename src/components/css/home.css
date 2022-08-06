@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Radio+Canada:wght@300&display=swap');
+
 *,
 *:before,
 *:after {
@@ -81,16 +83,16 @@ body {
   position: absolute;
   will-change: transform;
   transition: all 0.3s ease-in-out;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  /* cursor: -webkit-grab; */
+  /* cursor: -moz-grab; */
+  /* cursor: grab; */
 }
 
 .moving.tinder--card {
   transition: none;
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
+  /* cursor: -webkit-grabbing; */
+  /* cursor: -moz-grabbing; */
+  /* cursor: grabbing; */
 }
 
 .tinder--card img {
@@ -149,4 +151,30 @@ body {
 }
 .uil-shopping-cart-alt {
   color: #6fb1e4;
+}
+
+.price{
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Radio Canada', sans-serif;
+  font-weight: 600;
+  font-size: larger;
+  text-decoration: none;
+}
+.product-info{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #72eab2;
+  position: relative;
+  bottom: -10%;
+  border-radius: 8px;
+  margin: 1.5rem 1rem;
+  padding: 0.6rem;
+}
+.product-info li{
+  list-style: none;
+}
+#avail{
+  color: rgb(0, 179, 255);
+  cursor: pointer;
 }
