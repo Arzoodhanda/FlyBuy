@@ -9,7 +9,7 @@ export const wishlistArr = [];
 
 export default function Home() {
   useEffect(() => {
-    initCards();
+    // initCards();
     fetchUrl();
   }, []);
 
@@ -125,8 +125,8 @@ export default function Home() {
             <h3>Product Name</h3>
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
-              <li id="avail"><i class="fa-solid fa-share"></i></li>
-              <li id="avail"><i class="fa-solid fa-location-dot"></i> Deliverable</li>
+              <li id="avail"><i className="fa-solid fa-share"></i></li>
+              <li id="avail"><i className="fa-solid fa-location-dot"></i> Deliverable</li>
             </div>
           </div>
 
@@ -139,10 +139,10 @@ export default function Home() {
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
-                <i class="fa-solid fa-share"></i>
+                <i className="fa-solid fa-share"></i>
               </li>
               <li id="avail">
-                <i class="fa-solid fa-location-dot"></i> Deliverable
+                <i className="fa-solid fa-location-dot"></i> Deliverable
               </li>
             </div>
           </div>
@@ -156,10 +156,10 @@ export default function Home() {
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
-                <i class="fa-solid fa-share"></i>
+                <i className="fa-solid fa-share"></i>
               </li>
               <li id="avail">
-                <i class="fa-solid fa-location-dot"></i> Deliverable
+                <i className="fa-solid fa-location-dot"></i> Deliverable
               </li>
             </div>
           </div>
@@ -173,10 +173,10 @@ export default function Home() {
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
-                <i class="fa-solid fa-share"></i>
+                <i className="fa-solid fa-share"></i>
               </li>
               <li id="avail">
-                <i class="fa-solid fa-location-dot"></i> Deliverable
+                <i className="fa-solid fa-location-dot"></i> Deliverable
               </li>
             </div>
           </div>
@@ -190,10 +190,10 @@ export default function Home() {
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
-                <i class="fa-solid fa-share"></i>
+                <i className="fa-solid fa-share"></i>
               </li>
               <li id="avail">
-                <i class="fa-solid fa-location-dot"></i> Deliverable
+                <i className="fa-solid fa-location-dot"></i> Deliverable
               </li>
             </div>
           </div>

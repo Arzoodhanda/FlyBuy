@@ -16,7 +16,7 @@ export default function About() {
       <p>FlyBuy, India's no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, yet the FlyBuy shopping app has managed to keep up without any hiccups. In addition, FlyBuy has vowed to serve customers to the best of its ability by introducing its first-ever loyalty program, The FlyBuy Insider. Gain access to priority delivery, early sales, lucrative deals and other special perks on all your shopping with the FlyBuy app. Download the FlyBuy app on your Android or IOS device today and experience shopping like never before!</p>
     </div> */}
 
-<section class="about-header">
+<section className="about-header">
       <h2>#Know Us</h2>
       <h3>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h3>
       <p>Be it clothing, footwear or accessories, FlyBuy offers you the ideal combination of fashion and functionality for men, women and kids. You will realise that the sky is the limit when it comes to the types of outfits that you can purchase for different occasions.</p>
@@ -24,9 +24,9 @@ export default function About() {
 
 </section>
 
-<section class="about-head">
+<section className="about-head">
 	<img src="images/pic1.jpg" alt="1" width="100"/>
-		<div class="about-detail">
+		<div className="about-detail">
       <h2>FlyBuy App</h2>
       <p>FlyBuy, India's no. 1 online fashion destination justifies its fashion relevance by bringing something new and chic to the table on the daily. Fashion trends seem to change at lightning speed, yet the FlyBuy shopping app has managed to keep up without any hiccups. In addition, FlyBuy has vowed to serve customers to the best of its ability by introducing its first-ever loyalty program, The FlyBuy Insider. Gain access to priority delivery, early sales, lucrative deals and other special perks on all your shopping with the FlyBuy app. Download the FlyBuy app on your Android or IOS device today and experience shopping like never before!</p>
     
