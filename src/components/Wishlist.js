@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./css/wishlist.css";
+import "./css/Wishlist.css";
 import { wishlistArr } from "./Home";
 
 export default function Wishlist() {

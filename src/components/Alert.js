@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import "./css/alert.css"
+import "./css/Alert.css"
 
 export default function Alert(props) {
   return (
