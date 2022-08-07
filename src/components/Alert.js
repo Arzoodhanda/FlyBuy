@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import "./css/Alert.css"
 
 export default function Alert(props) {

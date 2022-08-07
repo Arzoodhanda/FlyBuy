@@ -33,7 +33,6 @@ export default function Wishlist() {
       </div>
       <button
           className="button-85"
-          role="button"
           onClick={() => {
             navigate("/");
           }}
@@ -53,7 +52,6 @@ export default function Wishlist() {
         <p id="list"></p>
         <button
           className="button-85"
-          role="button"
           onClick={() => {
             navigate("/");
           }}

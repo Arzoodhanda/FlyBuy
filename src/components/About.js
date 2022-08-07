@@ -1,5 +1,5 @@
 import React from 'react'
-// import "./css/About.css";
+import "./css/About.css";
 
 export default function About() {
   return (
@@ -34,7 +34,7 @@ export default function About() {
 			<br/>
 			<br/>
       <br/>
-			<marquee bgcolor="lightgrey" loop="-1" scrollamount="5" width="100%">Create stunning image with as much or as little control as you like thanks to a choice of Basic and Creative modes.</marquee>
+			{/* <marquee bgcolor="lightgrey" loop="-1" scrollamount="5" width="100%">Create stunning image with as much or as little control as you like thanks to a choice of Basic and Creative modes.</marquee> */}
 		</div>
 </section>
     </>
