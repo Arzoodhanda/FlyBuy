@@ -1,0 +1,82 @@
+#hero1{
+	background-image: url(/public/images/image27.jpg);
+	height: 40vh;
+	width: 100%;
+    color: rgb(65, 61, 61);
+	background-size: 100%;
+	background-position: top 25% right 0;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 5px;
+	display: flex;
+    object-position: center;
+    object-fit: cover;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+}
+#pagination{
+	padding: 10px 10px;
+	text-align: center;
+	justify-content: center;
+	margin: 2rem 0;
+}
+#pagination a{
+	text-decoration: none;
+	background-color: #088178;
+	padding: 10px 15px;
+    margin: 0 .2rem;
+	border-radius: 4px;
+	color: white;
+	font-weight: 600;
+}
+#blog{
+	padding: 150px 100px 0 150px;
+}
+#blog .blog-box{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	padding-bottom: 4rem;
+}
+#blog .blog-img{
+	width: 50%;
+	margin-right: 40px;
+}
+#blog img{
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+#blog .blog-details{
+	width: 50%;
+	margin-right: 40px;
+}
+
+#blog .blog-details p{
+	color: grey;
+}
+
+#blog .blog-details a{
+	text-decoration: none;
+	font-size: 15px;
+	color: black;
+	font-weight: 700px;
+	transition: 0.3s;
+}
+#blog .blog-details a:hover{
+	color: #088178;
+}
+
+#blog .blog-box h1{
+	position: absolute;
+	top: -160px;
+	left: 0;
+	font-size: 90px;
+	font-weight: 500px;
+	color: darkkhaki;
+	z-index: -9;
+}

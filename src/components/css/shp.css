@@ -1,0 +1,61 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  min-width: 100vh;
+  background-color: white;
+  scroll-behavior: smooth;
+  /*font-family: 'Square Peg', cursive;*/
+  /* font-weight: ; */
+  font-family: 'Akaya Kanadaka', cursive;
+  top: 0;
+  bottom: 0;
+}
+
+:root{
+  --red: lightgreen;
+  --black: rgba(15,10,29,0.8);
+  --light: #2f3640;
+}
+
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 50%;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover{
+  color: seagreen;
+}
+
+/* shop.css */

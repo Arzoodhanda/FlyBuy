@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./css/home.css";
-import "./css/spinner.css";
+import "./css/Home.css";
+import "./css/Spinner.css";
 import Spinner from "./Spinner";
+import Alert from "./Alert";
 
 export const array = [];
 export const wishlistArr = [];
@@ -13,6 +14,7 @@ export default function Home() {
   }, []);
 
   const [loading, setLoading] = useState(true);
+  const [alert, setAlert] = useState(false)
 
   const allCards = document.querySelectorAll(".tinder--card");
 
@@ -21,8 +23,8 @@ export default function Home() {
 
     newCards.forEach(function (card, index) {
       card.style.zIndex = allCards.length - index;
-      card.style.transform =
-        "scale(" + (20 - index) / 20 + ") translateY(-" + 30 * index + "px)";
+      // card.style.transform =
+      //   "scale(" + (20 - index) / 20 + ") translateY(-" + 30 * index + "px)";
       card.style.opacity = (10 - index) / 10;
     });
 
@@ -38,8 +40,12 @@ export default function Home() {
 
       let card = cards[0];
       card.classList.add("removed");
-      
-      if (love) {
+
+      if(love==='add'){
+        // card.style.transform =
+        // "translate(-" + moveOutWidth + "px, 0px) rotate(0deg)";
+      }
+      else if (love==='accept') {
         card.style.transform =
         "translate(" + moveOutWidth + "px, -100px) rotate(-30deg)";
         // let arr = card.innerHTML.split(" ");
@@ -69,27 +75,28 @@ export default function Home() {
     };
   }
   let nopeListener = createButtonListener(false);
-  let loveListener = createButtonListener(true);
+  let addMe = createButtonListener('add');
+  let loveListener = createButtonListener('accept');
 
   async function fetchUrl() {
     let imgResponse = await fetch(
-      "https://source.unsplash.com/600x300/?electronics,laptops"
+      "https://source.unsplash.com/355x300/?electronics,laptops"
     );
     array.push(imgResponse.url);
     imgResponse = await fetch(
-      "https://source.unsplash.com/600x300/?electronics,accessories"
+      "https://source.unsplash.com/355x300/?electronics,accessories"
     );
     array.push(imgResponse.url);
     imgResponse = await fetch(
-      "https://source.unsplash.com/600x300/?electronics,headphones"
+      "https://source.unsplash.com/355x300/?electronics,headphones"
     );
     array.push(imgResponse.url);
     imgResponse = await fetch(
-      "https://source.unsplash.com/600x300/?electronics,mobile"
+      "https://source.unsplash.com/355x300/?electronics,mobile"
     );
     array.push(imgResponse.url);
     imgResponse = await fetch(
-      "https://source.unsplash.com/600x300/?electronics,pc"
+      "https://source.unsplash.com/355x300/?electronics,pc"
     );
     array.push(imgResponse.url);
     // console.log(array[0])
@@ -100,26 +107,26 @@ export default function Home() {
     setLoading(false);
   }
 
+  const addToCart = ()=>{
+    
+    setAlert(true)
+    setTimeout(()=>{
+      setAlert(null)
+    }, 1500)
+  }
+
   return (
     <>
-      {/* <Alert/> */}
+      <Alert alert={alert}/>
       <div className="tinder">
         <div className="tinder--cards">
           <div className="tinder--card">
-            <img
-              src={array[0]}
-              alt="card"
-            />
+            <img src={array[0]} alt="card"/>
             <h3>Product Name</h3>
-            <p>Product's description will be written here.</p>
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
-              <li id="avail">
-                <i class="fa-solid fa-share"></i>
-              </li>
-              <li id="avail">
-                <i class="fa-solid fa-location-dot"></i> Deliverable
-              </li>
+              <li id="avail"><i class="fa-solid fa-share"></i></li>
+              <li id="avail"><i class="fa-solid fa-location-dot"></i> Deliverable</li>
             </div>
           </div>
 
@@ -129,7 +136,6 @@ export default function Home() {
               alt="card"
             />
             <h3>Product Name</h3>
-            <p>Product's description will be written here.</p>
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
@@ -147,7 +153,6 @@ export default function Home() {
               alt="card"
             />
             <h3>Product Name</h3>
-            <p>Product's description will be written here.</p>
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
@@ -165,7 +170,6 @@ export default function Home() {
               alt="card"
             />
             <h3>Product Name</h3>
-            <p>Product's description will be written here.</p>
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
@@ -183,7 +187,6 @@ export default function Home() {
               alt="card"
             />
             <h3>Product Name</h3>
-            <p>Product's description will be written here.</p>
             <div className="product-info">
               <li className="price">&#8377; 45000</li>
               <li id="avail">
@@ -203,7 +206,8 @@ export default function Home() {
             id="shop-cart"
             title="Add to Cart"
             onClick={() => {
-              // addToCart();
+              addToCart();
+              addMe();
             }}
           >
             <i className="uil uil-shopping-cart-alt"></i>
@@ -230,8 +234,8 @@ export default function Home() {
             <span
               id="info"
               title="Info."
-              onMouseOver={() => {
-                alert("info 12");
+              onClick={() => {
+                alert("FlyBuy's Product info");
               }}
             >
               <i className="uil uil-info-circle"></i>

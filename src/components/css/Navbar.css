@@ -26,7 +26,7 @@ body {
   height: 3rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 1rem 0 0.3rem;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   z-index: 1;
@@ -67,8 +67,11 @@ body {
   font-family: "Radio Canada", sans-serif;
   font-size: 1.7rem;
   font-weight: 600;
+  /* color: #0d6Dfd; */
+  color: #0d6efd;
   text-decoration: none;
-  margin-left: 1rem;
+  /* left: 0; */
+  /* margin-left: 1rem; */
 }
 
 .dropdown {

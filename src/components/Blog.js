@@ -1,7 +1,9 @@
 import React from 'react'
-import "./css/about.css";
+import "./css/Blog.css";
 
 export default function Blog() {
+  let width =  (document.body.clientWidth)/24.5;
+  // document.getElementById('hero1').style.height = "auto";
   return (
     <>
     <section id="hero1">
@@ -10,11 +12,11 @@ export default function Blog() {
     </section>
 
     <section id="blog">
-      <div class="blog-box">
-        <div class="blog-img">
+      <div className="blog-box">
+        <div className="blog-img">
           <img src="images/image5.jpg" width="50%"/>
         </div>
-        <div class="blog-details">
+        <div className="blog-details">
           <h4>How To DIY Your Own Set Of Distressed Denims at Home</h4>
           <p>The trend of distressed denims has taken over the world.Denim is something that you can easily pair with your top, frock, Kurti, etc.</p>
           <a href="#">Read more</a>
@@ -27,7 +29,7 @@ export default function Blog() {
     <section id="pagination">
       <a href="#">1</a>
       <a href="#">2</a>
-      <a href="#"><i class="fa-regular fa-right"></i></a>
+      <a href="#"><i className="fa-solid fa-angle-right"></i></a>
     </section>
     </>
   )

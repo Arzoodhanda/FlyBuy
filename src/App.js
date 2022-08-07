@@ -12,19 +12,21 @@ import Shop from './components/Shop';
 import Blog from './components/Blog';
 import Home from './components/Home';
 import Wishlist from './components/Wishlist';
+import Cart from './components/Cart';
 
 function App() {
   return (
     <>
     <Router>
       <Navbar/>
-      <div className='container'>
+      <div>
       <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/shop" element={<Shop/>}/>
           <Route exact path="/blog" element={<Blog/>}/>
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/wishlist" element={<Wishlist/>}/>
+          <Route exact path="/cart" element={<Cart/>}/>
           <Route path="*" element={<Home/>}/>
       </Routes>
       {/* <Footer/> */}

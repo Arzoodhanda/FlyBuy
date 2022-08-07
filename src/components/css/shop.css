@@ -1,75 +1,12 @@
-body{
-  margin: 0px;
-  padding: 0px;
-  min-width: 100vh;
-  background-color: white;
-  scroll-behavior: smooth;
-  /*font-family: 'Square Peg', cursive;*/
-  /* font-weight: ; */
-  font-family: 'Akaya Kanadaka', cursive;
-  top: 0;
-  bottom: 0;
-}
-
-:root{
-  --red: lightgreen;
-  --black: rgba(15,10,29,0.8);
-  --light: #2f3640;
-}
-
-
-#header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 50%;
-  background-color: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-#navbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-#navbar li{
-  list-style: none;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-#navbar li a{
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  color: black;
-  transition: 0.3s ease;
-}
-
-#navbar li a:hover{
-  color: seagreen;
-}
-
-
 #feature{
 	text-align: center;
 }
-
-
 #hero{
-	/* background-image: url("images/image5.jpg"); */
+	/* background-image: url(/public/images/image5.jpg); */
 	height: 90vh;
 	width: 100%;
 	background-size: 100%;
-	background-position: top 25% right 0;
+	background-position: top 50% right 0;
 	padding: 0 5px;
 	display: flex;
 	flex-direction: column;
@@ -81,19 +18,24 @@ body{
 
 @keyframes animate{
 	0%{
-			background-image: url(/public/images/image21.jpg);
-	}
-	25%{
-		background-image: url(/public/images/image12.jpg);
-	}
-	50%{
-		background-image: url(/public/images/image17.jpg);
-	}
-	75%{
-		background-image: url(/public/images/image18.jpg);
-	}
-	100%{
-		background-image: url(/public/images/image19.jpg);
+        background-image: url(/public/images/image21.jpg);
+        background-repeat: no-repeat;
+    }
+    25%{
+        background-image: url(/public/images/image12.jpg);
+        background-repeat: no-repeat;
+    }
+    50%{
+        background-image: url(/public/images/image17.jpg);
+        background-repeat: no-repeat;
+    }
+    75%{
+        background-image: url(/public/images/image18.jpg);
+        background-repeat: no-repeat;
+    }
+    100%{
+        background-image: url(/public/images/image19.jpg);
+        background-repeat: no-repeat;
 	}
 }
 
@@ -148,9 +90,13 @@ body{
 	max-height: 100%;
 }
 .time{
-	position: absolute;
-	top: 0px;
-	right: 20px;
+	/* position: absolute; */
+	/* top: 0px; */
+	/* right: 20px; */
+    text-align: right;
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
 	color: black;
 	font-style: bold;
 }
@@ -160,7 +106,8 @@ body{
 	align-items: center;
 	box-sizing: border-box;
 	font-size: 18px;
-	line-height: 35px;
+    margin-bottom: 2.3rem;
+	line-height: 2rem;
 }
 .price{
 	color: navajowhite;
@@ -173,6 +120,8 @@ body{
 	height: 40px;
 	width: 100%;
 	display: flex;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
 	justify-content: center;
 	align-items: center;
 	background-color: darkgreen;
@@ -399,80 +348,7 @@ button:hover{
 				/*blog page*/
 
 
-#hero1{
-	background-image: url(/public/images/image27.jpg);
-	height: 40vh;
-	width: 100%;
-	background-size: 100%;
-	background-position: top 25% right 0;
-	padding: 0pc 5px;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	justify-content: center;
-}
-#pagination{
-	padding: 10px 10px;
-	text-align: center;
-	justify-content: center;
-	margin-top: 30px;
-}
-#pagination a{
-	text-decoration: none;
-	background-color: #088178;
-	padding: 10px 15px;
-	border-radius: 4px;
-	color: white;
-	font-weight: 600;
-}
-#blog{
-	padding: 150px 100px 0 150px;
-}
-#blog .blog-box{
-	display: flex;
-	align-items: center;
-	width: 100%;
-	position: relative;
-	padding-bottom: 90px;
-}
-#blog .blog-img{
-	width: 50%;
-	margin-right: 40px;
-}
-#blog img{
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-}
-#blog .blog-details{
-	width: 50%;
-	margin-right: 40px;
-}
 
-#blog .blog-details p{
-	color: grey;
-}
-
-#blog .blog-details a{
-	text-decoration: none;
-	font-size: 15px;
-	color: black;
-	font-weight: 700px;
-	transition: 0.3s;
-}
-#blog .blog-details a:hover{
-	color: #088178;
-}
-
-#blog .blog-box h1{
-	position: absolute;
-	top: -160px;
-	left: 0;
-	font-size: 90px;
-	font-weight: 500px;
-	color: darkkhaki;
-	z-index: -9;
-}
 #cart{
 	padding: 10px 70px 10px 70px;
 }
@@ -617,29 +493,4 @@ button:hover{
 	white-space: nowrap;
   margin-top: 20px;
   cursor: pointer;
-}
-
-.about-header{
-	background-image: url(/public/images/image14.jpg);
-	height: 40vh;
-	background-size: 100%;
-	background-position: top 25% right;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	justify-content: center;
-}
-
-
-.about-head{
-	padding: 50px 100px 0 150px;
-	display: flex;
-	text-align: center;
-}
-.about-head img{
-	width: 50%;
-	height: auto;
-}
-.about-head div{
-	padding-left: 40px;
 }

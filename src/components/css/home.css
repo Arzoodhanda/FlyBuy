@@ -9,8 +9,9 @@
 }
 body {
   /* background: #ccfbfe; */
-  background-color: #ffdee9;
-  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  /* background-color: #ffdee9; */
+  /* background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%); */
+  background: rgb(240, 240, 249);
 }
 .tinder {
   width: 100%;
@@ -72,13 +73,16 @@ body {
 
 .tinder--card {
   display: inline-block;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
   width: 90vw;
   max-width: 20rem;
   height: 60vh;
   /* height: 55vh; */
   background: #ffffff;
   /* padding-bottom: 40px; */
-  border-radius: 8px;
+  border-radius: 1.4rem;
   overflow: hidden;
   position: absolute;
   will-change: transform;
@@ -97,18 +101,20 @@ body {
 
 .tinder--card img {
   max-width: 100%;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
   pointer-events: none;
 }
 
 .tinder--card h3 {
-  margin-top: 32px;
-  font-size: 32px;
-  padding: 0 16px;
+  margin: 1.5rem 0 0 0;
+  font-size: 2rem;
   pointer-events: none;
 }
 
 .tinder--card p {
-  margin-top: 24px;
+  margin: 2rem 0;
   font-size: 20px;
   padding: 0 16px;
   pointer-events: none;
@@ -141,16 +147,20 @@ body {
 /* Accepted button */
 .uil-heart-alt {
   color: #fface4;
+  cursor: pointer;
 }
 /* Rejected button */
 .uil-multiply {
   color: #acb5bb;
+  cursor: pointer;
 }
 .uil-info-circle {
   color: #72eab2;
+  cursor: pointer;
 }
 .uil-shopping-cart-alt {
   color: #6fb1e4;
+  cursor: pointer;
 }
 
 .price{
@@ -159,6 +169,8 @@ body {
   font-weight: 600;
   font-size: larger;
   text-decoration: none;
+  background-color: transparent;
+  color: #000;
 }
 .product-info{
   display: flex;
@@ -168,7 +180,7 @@ body {
   position: relative;
   bottom: -10%;
   border-radius: 8px;
-  margin: 1.5rem 1rem;
+  margin: 0 1rem;
   padding: 0.6rem;
 }
 .product-info li{
