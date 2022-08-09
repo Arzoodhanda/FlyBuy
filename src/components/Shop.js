@@ -13,14 +13,12 @@ export default function Shop() {
         <button>SHOP NOW</button>
       </section>
 
-      <section id="feature">
+      <center>
         <h2>Featured Products</h2>
-        <p>Summer Collection New Modren Design</p>
-
-        <div
-          className="product"
-          onclick="window.location.href='sproduct.html';"
-        >
+        <p>Summer Collection New Modern Design</p>
+      </center>
+      <div id="feature">
+        <div className="product" onclick="window.location.href='sproduct.html';">
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
@@ -108,19 +106,21 @@ export default function Shop() {
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="banner">
-        <h4>Repair Services</h4>
+        <h3>Repair Services</h3>
         <h2>
           Up to <span>70% Off</span> All the T-Shirt & Accessories
         </h2>
         <button className="normal">Explore More</button>
       </section>
 
-      <section id="feature">
+      <center>
         <h2>New Arrivals</h2>
-        <p>Summer Collection New Modren Design</p>
+        <p>Summer Collection New Modern Design</p>
+      </center>
+      <section id="feature">
         <div className="product">
           <p className="time">New</p>
           <div className="img-box">
@@ -174,9 +174,11 @@ export default function Shop() {
         </div>
       </section>
 
-      <section id="feature">
+      <center>
         <h2>Beg collection</h2>
         <p>Beg Collection New Modren Design</p>
+      </center>
+      <section id="feature">
         <div className="product">
           <p className="time">New</p>
           <div className="img-box">
@@ -230,7 +232,7 @@ export default function Shop() {
         </div>
       </section>
 
-      <section id="sm-banner" className="section-p1">
+      <section id="sm-banner">
         <div className="banner-box">
           <h4>Crazy Deals</h4>
           <h2>Buy 1 get 1 free</h2>

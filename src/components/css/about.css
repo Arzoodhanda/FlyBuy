@@ -1,18 +1,18 @@
-.about {
+/* .about {
     margin: 2rem 4rem;
-}
-h3 {
+} */
+.about-header h3 {
     margin: 1.5rem 0;
 }
-p {
+.about-header p {
     margin: .7rem 3rem;
 }
 
-@media (max-width: 38em){
+/* @media (max-width: 38em){
     .about {
         margin: 1rem;
     }
-}
+} */
 
 .about-header{
 	background-image: url(/public/images/image14.jpg);
@@ -71,7 +71,8 @@ p {
     .about-head div{
         padding: 0 1rem;
     }
-    p {
+    .about-head p,
+    .about-header p {
         margin: .7rem 1rem;
     }
 }
