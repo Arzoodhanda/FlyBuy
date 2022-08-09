@@ -3,7 +3,7 @@
 }
 #hero{
 	/* background-image: url(/public/images/image5.jpg); */
-	height: 90vh;
+	height: 60vh;
 	width: 100%;
 	background-size: 100%;
 	background-position: top 50% right 0;
@@ -45,6 +45,7 @@
 
 #hero h1{
 	color: #088178;
+	/* font-size: 6vh; */
 }
 #hero button{
 	background-color: transparent;
@@ -493,4 +494,9 @@ button:hover{
 	white-space: nowrap;
   margin-top: 20px;
   cursor: pointer;
+}
+@media (max-width: 38rem) {
+	#hero{
+		height: 40vh;
+	}
 }

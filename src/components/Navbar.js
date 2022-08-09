@@ -49,7 +49,7 @@ export default function Navbar() {
           </Link>
         </li>
         <div className="dropdown">
-          <li id="profile" title="User">
+          <li id="profile">
             <i className="fa-solid fa-user"></i>
           </li>
           <div className="dropdown-content">

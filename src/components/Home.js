@@ -9,18 +9,18 @@ export const wishlistArr = [];
 
 export default function Home() {
   useEffect(() => {
-    // initCards();
+    initCards();
     fetchUrl();
-  }, []);
+  });
 
   const [loading, setLoading] = useState(true);
-  const [alert, setAlert] = useState(false)
+  const [alert, setAlert] = useState()
 
   const allCards = document.querySelectorAll(".tinder--card");
 
   function initCards() {
     let newCards = document.querySelectorAll(".tinder--card:not(.removed)");
-
+    
     newCards.forEach(function (card, index) {
       card.style.zIndex = allCards.length - index;
       // card.style.transform =
@@ -41,18 +41,15 @@ export default function Home() {
       let card = cards[0];
       card.classList.add("removed");
 
-      if(love==='add'){
-        // card.style.transform =
-        // "translate(-" + moveOutWidth + "px, 0px) rotate(0deg)";
-      }
+      if(love==='add'){}
       else if (love==='accept') {
         card.style.transform =
         "translate(" + moveOutWidth + "px, -100px) rotate(-30deg)";
         // let arr = card.innerHTML.split(" ");
-        let index = Math.abs(cards.length - 5);
-        console.log(Math.abs(cards.length - 5));
-        wishlistArr.push(array[index]);
-        console.log(wishlistArr)
+        // let index = Math.abs(cards.length - 5);
+        // console.log(Math.abs(cards.length - 5));
+        // wishlistArr.push(array[index]);
+        // console.log(wishlistArr)
         // let splt = arr[1].split('src=')
         // console.log(card)
         // console.log(arr[1])
@@ -104,7 +101,7 @@ export default function Home() {
     // console.log(array[2])
     // console.log(array[3])
     // console.log(array[4])
-    setLoading(false);
+    setLoading(false)
   }
 
   const addToCart = ()=>{
@@ -112,7 +109,7 @@ export default function Home() {
     setAlert(true)
     setTimeout(()=>{
       setAlert(null)
-    }, 1500)
+    }, 2000)
   }
 
   return (

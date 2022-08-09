@@ -31,23 +31,51 @@ p {
 	justify-content: center;
 }
 .about-head{
-	padding: 0 100px 0 150px;
+	padding: 0 5rem;
     margin: 4rem 0;
 	display: flex;
 	text-align: center;
+    justify-content: space-between;
 }
 .about-head img{
-	width: 50%;
-	height: auto;
+    width: 50%;
+    height: auto;
     border-radius: .2rem;
+    object-fit: cover;
 }
 .about-head div{
-	padding-left: 40px;
+    padding-left: 2rem;
 }
-.about-detail p{
+.about-head p{
     margin: 0;
 }
-marquee{
+@media (max-width: 62rem){
+    .about-head{
+        padding: 0 2rem;
+    }
+    p {
+        margin: .7rem 2rem;
+    }
+}
+@media (max-width: 45rem){
+    .about-head{
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-head img{
+        margin-bottom: 1rem;
+        width: 80vw;
+    }
+    .about-head div{
+        padding: 0 1rem;
+    }
+    p {
+        margin: .7rem 1rem;
+    }
+}
+/* marquee{
     border-radius: .5rem;
     padding: .5rem;
-}
+} */

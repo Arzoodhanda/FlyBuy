@@ -8,7 +8,8 @@
   height: 115vh;
   /* width: 80px; */
   z-index: 999;
-  transform: translateX(-40px);
+  /* transform: translateX(-40px); */
+  transform: translate(-40px, -20vh);
   /* height: 80px; */
 }
 .lds-roller div {
@@ -99,3 +100,8 @@
     transform: rotate(360deg);
   }
 }
+/* @media (max-width: 38rem){
+  .lds-roller{
+    transform: translate(-40px, -20vh);
+  }
+} */

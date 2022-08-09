@@ -5,20 +5,24 @@ export const Profile = () => {
     const {user, isAuthenticated} = useAuth0()
 
   return (
-    isAuthenticated && (
+    (isAuthenticated && (
         <>
         <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-        <a href="#">Settings</a>
+        <center>
+          <h2>{user.name}</h2>
+          <p>{user.email}</p>
+          <a href="#">Settings</a>
+        </center>
         </>
-    )
+    ))
 ||
-    !isAuthenticated && (
+    (!isAuthenticated && (
         <>
         <img src="images/user-1.png" alt="anonymous" />
-        <h2>Guest user</h2>
+        <center>
+          <h2>Guest user</h2>
+        </center>
         </>
-    )
+    ))
   )
 }
