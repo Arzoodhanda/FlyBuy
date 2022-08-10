@@ -51,89 +51,89 @@ export default function Shop() {
       </center>
       <div id="feature">
         {/* <div className="product" onclick="window.location.href='sproduct.html';"> */}
-        <div id='helo' className="product" onClick={goTo}>
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top<Link to="#">Price: $ 23 /-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image11.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top<Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image22.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image23.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image14.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image15.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image25.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
@@ -154,52 +154,52 @@ export default function Shop() {
         <p>Summer Collection New Modern Design</p>
       </center>
       <section id="feature">
-        <div className="product">
+      <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image7.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
@@ -212,52 +212,52 @@ export default function Shop() {
         <p>Beg Collection New Modren Design</p>
       </center>
       <section id="feature">
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image9.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image14.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
 
-        <div className="product">
+        <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>

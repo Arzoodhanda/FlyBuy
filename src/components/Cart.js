@@ -1,5 +1,7 @@
 import React from 'react'
 import "./css/Shop.css"
+import "./css/Cart.css"
+import { Link } from 'react-router-dom'
 
 export default function Cart() {
   return (
@@ -9,10 +11,8 @@ export default function Cart() {
 		<p>Read all case studies about our products!</p>
 </section>
 
-
-
 <section id="cart">
-	<table width="100%">
+	<table>
 		<thead>
 			<tr>
 				<td>Remove</td>
@@ -25,24 +25,24 @@ export default function Cart() {
 		</thead>
 		<tbody>
 			<tr>
-				<td><a href="#"><i className="far fa-times-circle"></i></a></td>
-				<td><img src="images/image2.jpg"/></td>
+				<td><Link to="#"><i className="far fa-times-circle"></i></Link></td>
+				<td><img src="images/image2.jpg" alt="FlyBuy product"/></td>
 				<td>woolen top</td>
 				<td>$110.19</td>
 				<td><input type="number" value="1"/></td>
 				<td>$100.19</td>
 			</tr>
 			<tr>
-				<td><a href="#"><i className="far fa-times-circle"></i></a></td>
-				<td><img src="images/image7.jpg"/></td>
+				<td><Link to="#"><i className="far fa-times-circle"></i></Link></td>
+				<td><img src="images/image7.jpg" alt="FlyBuy product"/></td>
 				<td>White shirt</td>
 				<td>$112.09</td>
 				<td><input type="number" value="1"/></td>
 				<td>$102.09</td>
 			</tr>
 			<tr>
-				<td><a href="#"><i className="far fa-times-circle"></i></a></td>
-				<td><img src="images/image9.jpg"/></td>
+				<td><Link to="#"><i className="far fa-times-circle"></i></Link></td>
+				<td><img src="images/image9.jpg" alt="FlyBuy product"/></td>
 				<td>Leather beg</td>
 				<td>$230.11</td>
 				<td><input type="number" value="1"/></td>

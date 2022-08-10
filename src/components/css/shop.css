@@ -161,6 +161,7 @@ button.normal{
 	border-radius: 4px;
 	transition: 0.2s;
 	outline: none;
+	margin: .5rem 0 1rem 0;
 }
 button:hover{
 	background-color: lightblue;
@@ -295,123 +296,9 @@ button:hover{
 	font-size: 15px;
 }
 
-#prodetials{
-	display: flex;
-	margin-top: 30px;
-	margin-left: 150px;
-}
-
-#prodetials .single-pro-image{
-	width: 20%;
-	margin-right: 50px;
-
-}
-.small-image-group{
-	display: flex;
-	justify-content: space-between;
-	margin-top: 15px;
-}
-.small-image-col{
-	flex-basis: 30%;
-	cursor: pointer;
-}
-#prodetials .single-pro-details{
-	width: 50%;
-	padding: 2px;
-}
-#prodetials .single-pro-details h6{
-	font-size: 15px;
-	margin-top: 10px;
-}
-#prodetials .single-pro-details h4{
-	font-size: 20px;
-}
-#prodetials .single-pro-details h2{
-	font-size: 20px;
-}
-#prodetials .single-pro-details select{
-	display: block;
-	padding: 5px 10px;
-	margin-bottom: 10px;
-}
-#prodetials .single-pro-details input{
-	width: 50px;
-	height: 40px;
-	padding-left: 10px;
-	font-size: 16px;
-	margin-right: 10px;
-}
-#prodetials .single-pro-details button{
-	background-color: seagreen;
-}
-#prodetials .single-pro-details span{
-	line-height: 25px;
-}
-
-
 				/*blog page*/
 
 
-
-#cart{
-	padding: 10px 70px 10px 70px;
-}
-#cart table{
-	width: 100%;
-	margin-top: 50px;
-	border-collapse: collapse;
-	table-layout: fixed;
-	white-space: nowrap;
-}
-#cart table img{
-	width: 70px;
-}
-#cart table td:nth-child(1){
-	width: 100px;
-	text-align: center;
-}
-#cart table td:nth-child(2){
-	width: 150px;
-	text-align: center;
-}
-#cart table td:nth-child(3){
-	width: 250px;
-	text-align: center;
-}
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6){
-	width: 150px;
-	text-align: center;
-}
-
-#cart table td:nth-child(5) input{
-	width: 70px;
-	padding: 10px 5px 10px 15px;
-}
-#cart table thead{
-	border: 1px solid black;
-	border-right: none;
-	border-left: none;
-}
-#cart table thead td{
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 15px;
-	padding: 18px 0;
-}
-#cart table tbody tr td{
-	padding-top: 15px;
-}
-#cart table tbody td{
-	font-size: 20px;
-}
-
-#card-add{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
 #coupon{
 	width: 150px;
 	margin: 30px 20px 10px 30px;
@@ -444,60 +331,7 @@ button:hover{
   margin-top: 20px;
   cursor: pointer;
 }
-#hero2{
-	background-image: url(/public/images/image12.jpg);
-	height: 40vh;
-	width: 100%;
-	background-size: 100%;
-	background-position: top 25% right 0;
-	padding: 0pc 5px;
-	display: flex;
-	text-align: center;
-	flex-direction: column;
-	justify-content: center;
-}
 
-#Subtotal{
-	padding: 15px 35px 30px 40px;
-	border: 1px solid grey;
-	margin-right: 80px;
-	margin-top: 60px;
-}
-#Subtotal h3{
-	font-size: 20px;
-}
-#Subtotal table tr td{
-	text-align: center;
-}
-#Subtotal table tbody tr td{
-	padding-top: 15px;
-}
-#Subtotal table tbody td{
-	font-size: 20px;
-}
-#Subtotal table{
-	width: 500px;
-	padding: 300px;
-	border-collapse: collapse;
-	table-layout: fixed;
-	white-space: nowrap;
-}
-#Subtotal table tr td{
-	border: 2px solid black;
-	margin-bottom: 10px;
-}
-#Subtotal button{
-	background-color: seagreen;
-	border: 1px solid transparent;
-	font-size: 20px;
-	font-weight: 600;
-	padding: 8px 20px;
-	color: white;
-	outline: none;
-	white-space: nowrap;
-  margin-top: 20px;
-  cursor: pointer;
-}
 @media (max-width: 38rem) {
 	#hero{
 		height: 40vh;
