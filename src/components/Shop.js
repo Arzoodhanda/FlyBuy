@@ -1,8 +1,40 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
 import "./css/Shop.css";
 
+export let name
+export let price
+export let imgSrc
 export default function Shop() {
+  let navigate = useNavigate();
+
+  const goTo = (e)=>{
+    name = e.nativeEvent.path[2].childNodes[2].childNodes[0].data
+    price = e.nativeEvent.path[2].childNodes[2].childNodes[1].childNodes[0].data.split(' ')[2]
+    imgSrc = e.target.currentSrc
+
+    navigate('/addtocart', {params: {
+      name: name,
+      price: price,
+      img: imgSrc,
+    }})
+    // prints the object
+    // console.log(e)
+
+    // prints the element array of current image clicked
+    // console.log(e.nativeEvent.path)
+
+    // Name of the product
+    // console.log(e.nativeEvent.path[2].childNodes[2].childNodes[0].data)
+
+    // Price of the product
+    // console.log(e.nativeEvent.path[2].childNodes[2].childNodes[1].childNodes[0].data.split(' ')[2])
+
+    // Prints the image source
+    // console.log(e.target.currentSrc)
+  }
+
   return (
     <>
       <section id="hero">
@@ -18,13 +50,14 @@ export default function Shop() {
         <p>Summer Collection New Modern Design</p>
       </center>
       <div id="feature">
-        <div className="product" onclick="window.location.href='sproduct.html';">
+        {/* <div className="product" onclick="window.location.href='sproduct.html';"> */}
+        <div id='helo' className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="#">Price: $ 23 /-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>
@@ -37,7 +70,7 @@ export default function Shop() {
             <img src="images/image11.jpg" alt="1" />
           </div>
           <p className="detail">
-            Black top <Link to="#"> Price $ 23/-</Link>
+            Black top<Link to="#"> Price $ 23/-</Link>
           </p>
           <div className="cart">
             <Link to="#">Add to Cart</Link>

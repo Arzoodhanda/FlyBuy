@@ -13,6 +13,7 @@ import Blog from './components/Blog';
 import Home from './components/Home';
 import Wishlist from './components/Wishlist';
 import Cart from './components/Cart';
+import AddToCart from './components/AddToCart';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/wishlist" element={<Wishlist/>}/>
           <Route exact path="/cart" element={<Cart/>}/>
+          <Route exact path="/addtocart" element={<AddToCart/>}/>
           <Route path="*" element={<Home/>}/>
       </Routes>
       {/* <Footer/> */}

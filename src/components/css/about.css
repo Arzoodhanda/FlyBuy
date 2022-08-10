@@ -16,7 +16,7 @@
 
 .about-header{
 	background-image: url(/public/images/image14.jpg);
-	height: 40vh;
+	/* height: 40vh; */
 	background-size: 100%;
 	background-position: top 25% right;
 

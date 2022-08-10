@@ -98,6 +98,9 @@ h1 {
   .about-head div {
     padding: 0 1rem;
   }
+  #blog h1{
+    margin-left: 1rem;
+  }
   p {
     margin: 0.7rem 1rem;
   }

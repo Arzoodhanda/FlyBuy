@@ -12,7 +12,7 @@
 	width: 100%;
 	background-size: 100%;
 	background-position: top 50% right 0;
-	margin-bottom: .2rem;
+	margin-bottom: 1rem;
 	padding: 0 5px;
 	display: flex;
 	flex-direction: column;
@@ -61,7 +61,7 @@
 	cursor: pointer;
 }
 .product{
-	margin: 1rem;
+	margin: 1rem 3rem;
 	height: 20rem;
 	width: 15rem;
 	position: relative;
@@ -72,8 +72,10 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	/* float: left; */
 	cursor: pointer;
+	/* flex-grow: 1; */
+	/* flex: 1 0 calc(25% - 10px); */
+	/* width: calc(100% * (1/5)); */
 
 }
 .product a{
@@ -500,7 +502,19 @@ button:hover{
 	#hero{
 		height: 40vh;
 	}
+	.product{
+		margin: 1rem;
+	}
+	#banner3 .banner-box{
+	min-width: 75vw;
+	}
 }
+@media (max-width: 42rem) {
+	.product{
+		margin: 1rem 0.5rem;
+	}
+}
+
 @media (max-width: 45rem) {
 	/* #sm-banner{
 		margin: 0.5rem 0;
