@@ -26,7 +26,7 @@ body {
   height: 3rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem 0 0.3rem;
+  padding: 0 0.5rem;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   z-index: 1;
@@ -155,6 +155,22 @@ div a {
 .mobile-nav i[name="cross"] {
   display: none;
 }
+#mob-icons-left{
+  display: flex;
+  align-items: center;
+}
+#mob-icons-left .mobile-nav{
+  margin-right: .5rem;
+}
+#mob-icons-right{
+  display: none;
+  pointer-events: none;
+}
+#mob-icons-right a{
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+}
 
 @media (max-width: 38em) {
   .mobile-nav {
@@ -202,5 +218,9 @@ div a {
   }
   .active .mobile-nav i[name="cross"] {
     display: block;
+  }
+  #mob-icons-right{
+    display: block;
+    pointer-events: auto;
   }
 }

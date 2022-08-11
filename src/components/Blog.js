@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Footer from "./Footer";
 import "./css/Blog.css";
 
 export default function Blog() {  
@@ -30,6 +31,8 @@ export default function Blog() {
       <Link to="#">2</Link>
       <Link to="#"><i className="fa-solid fa-angle-right"></i></Link>
     </section>
+
+    <Footer/>
     </>
   )
 }

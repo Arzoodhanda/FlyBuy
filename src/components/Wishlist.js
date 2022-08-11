@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/Wishlist.css";
+import Footer from "./Footer";
 import { wishlistArr } from "./Home";
 
 export default function Wishlist() {
@@ -9,7 +10,7 @@ export default function Wishlist() {
   // const array = ['https://images.unsplash.com/photo-1589710917567-60ca712f0431?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8ZWxlY3Ryb25pY3MsbGFwdG9wc3x8fHx8fDE2NTk3NjIzMzI&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600']
   useEffect(() => {
     // const array = ["a", "aa", "bad", "fasdgt", "fasdf"];
-    console.log({wishlistArr});
+    // console.log({wishlistArr});
     if(wishlistArr.length===0){
 
     }
@@ -30,8 +31,7 @@ export default function Wishlist() {
       <div className="about">
         <h1>Your WishList</h1>
         <h3>No items are present</h3>
-      </div>
-      <button
+        <button
           className="button-85"
           onClick={() => {
             navigate("/");
@@ -39,6 +39,7 @@ export default function Wishlist() {
           >
           Add more items
         </button>
+      </div>
       </>
     );
   }
@@ -61,6 +62,8 @@ export default function Wishlist() {
         <div className="card-container">
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 }

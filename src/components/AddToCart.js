@@ -1,8 +1,9 @@
 import React from 'react'
 import './css/AddToCart.css'
+import Footer from './Footer'
 import { name, price, imgSrc } from './Shop'
 
-export default function AddToCart(params) {
+export default function AddToCart() {
   return (
     <>
     <section id="prodetials">
@@ -51,6 +52,8 @@ export default function AddToCart(params) {
         <span>- Official Product from Flybuy pvt ltd</span>
       </div>
     </section>
+
+    <Footer/>
     </>
   )
 }

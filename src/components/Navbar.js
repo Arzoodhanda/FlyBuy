@@ -21,12 +21,19 @@ export default function Navbar() {
 
   return (
     <div className="header">
-      <div className="logo">
-        {/* <img src="logo192.png" alt="" width="25"/> */}
-        <Link className="navbar-title" to="/">
-          FlyBuy
-        </Link>
+      <div id="mob-icons-left">
+        <div className="mobile-nav" onClick={() => toggleNavbar()}>
+          <i className="fa-solid fa-bars" name="bars"></i>
+          <i className="fa-solid fa-xmark" name="cross"></i>
+        </div>
+        <div className="logo">
+          {/* <img src="logo192.png" alt="" width="25"/> */}
+          <Link className="navbar-title" to="/">
+            FlyBuy
+          </Link>
+        </div>
       </div>
+
       <ul className="navbar">
         <li>
           <Link to="/" onClick={navClick}>
@@ -74,9 +81,14 @@ export default function Navbar() {
         {/* <Link to="/wishlist" title="Wishlist" onClick={navClick}>
           <i className="fa-solid fa-heart"></i>
         </Link> */}
-        <div className="mobile-nav" onClick={() => toggleNavbar()}>
-          <i className="fa-solid fa-bars" name="bars"></i>
-          <i className="fa-solid fa-xmark" name="cross"></i>
+        
+        <div id="mob-icons-right">
+          <Link to="/wishlist" title="Wishlist">
+            <i className="fa-solid fa-heart"></i>
+          </Link>
+          <Link to="/cart" title="Add to Cart">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </Link>
         </div>
       {/* </div> */}
     </div>

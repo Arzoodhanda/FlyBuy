@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
+import Footer from "./Footer";
 import "./css/Shop.css";
 
 export let name
@@ -13,6 +14,10 @@ export default function Shop() {
     name = e.nativeEvent.path[2].childNodes[2].childNodes[0].data
     price = e.nativeEvent.path[2].childNodes[2].childNodes[1].childNodes[0].data.split(' ')[2]
     imgSrc = e.target.currentSrc
+
+
+    // window.open(window.location.origin + "/addtocart", '_blank', 'toolbar=0,location=0,menubar=0');
+    // window.open(window.location.origin + "/addtocart", '_blank');
 
     navigate('/addtocart', {params: {
       name: name,
@@ -51,7 +56,7 @@ export default function Shop() {
       </center>
       <div id="feature">
         {/* <div className="product" onclick="window.location.href='sproduct.html';"> */}
-        <div className="product" onClick={goTo}>
+        <div className="product" target="_blank" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
@@ -298,6 +303,7 @@ export default function Shop() {
           <h3>New Trendy Prints</h3>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

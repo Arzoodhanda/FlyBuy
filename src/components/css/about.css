@@ -47,7 +47,12 @@
     padding-left: 2rem;
 }
 .about-head p{
-    margin: 0;
+    margin: 1rem 0;
+}
+.about-head .marquee{
+    border-radius: .2rem;
+    background: lightgray;
+    padding: .25rem;
 }
 @media (max-width: 62rem){
     .about-head{
@@ -76,7 +81,3 @@
         margin: .7rem 1rem;
     }
 }
-/* marquee{
-    border-radius: .5rem;
-    padding: .5rem;
-} */
