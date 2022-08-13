@@ -1,10 +1,10 @@
 import React from "react";
-import "./css/Shop.css";
-import "./css/Cart.css";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Marquee from "react-fast-marquee";
 import QtyBtn from "./QtyBtn";
+import "./css/Shop.css";
+import "./css/Cart.css";
 
 export default function Cart() {
   const removeItem = (e) => {

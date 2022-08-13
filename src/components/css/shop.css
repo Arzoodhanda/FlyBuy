@@ -4,7 +4,7 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	width: 100%;
-	margin: 2rem 0 3rem 0;
+	margin: 20px 0 20px 0;
 }
 #hero{
 	/* background-image: url(/public/images/image5.jpg); */
@@ -308,6 +308,10 @@ button:hover{
 	color: green;
 	font-weight: 800;
 	font-size: 15px;
+}
+.bag-collection-container {
+	text-align: center;
+	margin-bottom: 35px;
 }
 
 @media (max-width: 38rem) {

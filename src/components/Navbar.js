@@ -90,10 +90,10 @@ export default function Navbar() {
         </Link> */}
         
         <div id="mob-icons-right">
-          <Link to="/wishlist" title="Wishlist">
+          <Link to="/wishlist" title="Wishlist" id="wishlist">
             <i className="fa-solid fa-heart"></i>
           </Link>
-          <Link to="/cart" title="Add to Cart">
+          <Link to="/cart" title="Add to Cart" id="add2cart">
             <i className="fa-solid fa-cart-shopping"></i>
           </Link>
         </div>

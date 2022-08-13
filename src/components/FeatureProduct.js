@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import data from "../data.json";
 import './css/Shop.css'
@@ -6,16 +6,14 @@ import './css/Shop.css'
 export default function FeatureProduct() {
 
     let navigate = useNavigate()
-    const [name, setName] = useState()
 
     const goTo = (product) => {
-        // let name = product.name
-        setName(product.name)
-        let price = product.price
-        let img = product.img
+        console.log(data)
         // window.open(window.location.origin + "/addtocart", '_blank', 'toolbar=0,location=0,menubar=0');
         // window.open(window.location.origin + "/addtocart", '_blank');
-        navigate("/addtocart", {name: name})
+
+        // window.open(`/addtocart/${product.id}`)
+        navigate(`/addtocart/${product.id}`)
     };
       
 // Shuffle the product items.

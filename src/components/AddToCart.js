@@ -1,38 +1,55 @@
-import React from 'react'
-import './css/AddToCart.css'
-import Footer from './Footer'
-import FeatureProduct from './FeatureProduct'
-// import { name, price, imgSrc } from './Shop'
+import React, { useEffect, useState } from 'react';
+import './css/AddToCart.css';
+import Footer from './Footer';
+import { useParams } from 'react-router-dom';
+import data from "../data.json"
 
-export default function AddToCart(a) {
-console.log(a)
+export default function AddToCart() {
+  const { id } = useParams();
+  const [imgSrc, setImgSrc] = useState()
+  const [name, setName] = useState()
+  const [price, setPrice] = useState()
+  console.log(id)
+
+useEffect(() => {
+  window.scrollTo(0, 0)
+  for(let i=0; i<data.length; i++){
+    if(id==data[i].id){
+      console.log(data[i].id)
+      setName(data[i].name)
+      setPrice(data[i].price)
+      setImgSrc(data[i].img)
+    }
+  }
+})
+
 
 
   return (
     <>
     <section id="prodetials">
       <div class="single-pro-image">
-          <img src = '' width="100%" class="active" alt=""/>
+          <img src = {imgSrc} width="100%" class="active" alt=""/>
 
         <div id="current-img" class="small-image-group">
           <div class="small-image-col">
-            <img name='img1' type="image" src="images/image7.jpg" width="100%" id="smallImg1" alt=""/>
+            <img name='img1' type="image" src = {imgSrc} width="100%" id="smallImg1" alt=""/>
           </div>
 
           <div class="small-image-col">
-            <img name='img2' type="image" src="images/image8.jpg" width="100%" id="smallImg2" alt=""/>
+            <img name='img2' type="image" src = {imgSrc} width="100%" id="smallImg2" alt=""/>
           </div>
 
           <div class="small-image-col">
-            <img name='img3' type="image" src="images/image9.jpg" width="100%" id="smallImg3" alt=""/>
+            <img name='img3' type="image" src = {imgSrc} width="100%" id="smallImg3" alt=""/>
           </div>
         </div>
       </div>
 
       <div class="single-pro-details">
         <h4>Shop / Shirt</h4>
-        <h2></h2>
-        <h3>$</h3>
+        <h2>{name}</h2>
+        <h3>$ {price}</h3>
         <div id='selects'>
           <select>
             <option>Select size</option>
@@ -51,7 +68,7 @@ console.log(a)
           </select>
           {/* <input type="number" value="1" min="1" max="5"/> */}
         </div>
-        <button class="normal">Add To Cart</button>
+        <button class="AddToCart-btn">Add To Cart</button>
         <h2>Product Details</h2>
         <span>- Official Product from Flybuy pvt ltd</span>
       </div>

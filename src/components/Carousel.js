@@ -18,9 +18,9 @@ const [viewCard, setViewCard] = useState(5)
     window.addEventListener('resize', setScreenSize);
   console.log(screenSize)
 
-  if(document.body.clientWidth >= 1519)
+  if(document.body.clientWidth >= 1520)
     {setViewCard(5)}
-  else if((document.body.clientWidth <= 1519) && (document.body.clientWidth >= 1225))
+  else if((document.body.clientWidth <= 1520) && (document.body.clientWidth >= 1225))
     {setViewCard(4)}
   else if((document.body.clientWidth <= 1225) && (document.body.clientWidth >= 920))
     {setViewCard(3)}
@@ -38,17 +38,12 @@ const [viewCard, setViewCard] = useState(5)
 
 
   let navigate = useNavigate()
-    const [name, setName] = useState()
 
     const goTo = (product) => {
-        setName(product.name)
-        // let price = product.price
-        // let img = product.img
-        // window.open(window.location.origin + "/addtocart", '_blank', 'toolbar=0,location=0,menubar=0');
-        // window.open(window.location.origin + "/addtocart", '_blank');
-        navigate("/addtocart", {name: name})
+        navigate(`/addtocart/${product.id}`)
     };
 
+//  Shuffle function for product shuffle
 //   if(data){
 //     data = data
 //      .map(value => ({ value, sort: Math.random() }))

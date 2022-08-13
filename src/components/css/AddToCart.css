@@ -46,7 +46,7 @@
 #prodetials .single-pro-details span{
 	line-height: 25px;
 }
-button.normal{
+button.AddToCart-btn{
 	background-color: transparent;
 	border: 0;
 	font-size: 20px;
@@ -58,6 +58,12 @@ button.normal{
 	transition: 0.2s;
 	outline: none;
 	margin: .5rem 0 1rem 0;
+	transition: all 250ms ease-out;
+}
+button.AddToCart-btn:hover,
+button.AddToCart-btn:focus{
+	box-shadow: 1px 3px 6px gray;
+
 }
 
 @media (max-width: 38rem){

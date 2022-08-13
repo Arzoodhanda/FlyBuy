@@ -28,7 +28,7 @@ function App() {
           <Route exact path="/about" element={<About/>}/>
           <Route exact path="/wishlist" element={<Wishlist/>}/>
           <Route exact path="/cart" element={<Cart/>}/>
-          <Route exact path="/addtocart" element={<AddToCart/>}/>
+          <Route exact path="/addtocart/:id" element={<AddToCart/>}/>
           <Route path="*" element={<Home/>}/>
       </Routes>
       {/* <Footer/> */}

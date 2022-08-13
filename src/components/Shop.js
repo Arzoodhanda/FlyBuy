@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import "./css/Shop.css";
-import data from "../data.json"
 import FeatureProduct from "./FeatureProduct";
-
-export let name;
-export let price;
-export let imgSrc;
 
 export default function Shop() {
   let navigate = useNavigate();
@@ -18,23 +13,11 @@ export default function Shop() {
   // }, []);
 
   const goTo = (e) => {
-    name = e.nativeEvent.path[2].childNodes[2].childNodes[0].data;
-    price =
-      e.nativeEvent.path[2].childNodes[2].childNodes[1].childNodes[0].data.split(
-        " "
-      )[2];
-    imgSrc = e.target.currentSrc;
 
     // window.open(window.location.origin + "/addtocart", '_blank', 'toolbar=0,location=0,menubar=0');
     // window.open(window.location.origin + "/addtocart", '_blank');
 
-    navigate("/addtocart", {
-      params: {
-        name: name,
-        price: price,
-        img: imgSrc,
-      },
-    });
+    navigate("/addtocart")
     // prints the object
     // console.log(e)
 
@@ -65,9 +48,6 @@ export default function Shop() {
         <h2>Featured Products</h2>
         <p>Summer Collection New Modern Design</p>
       </center>
-      {/* <div id="feature">
-
-      </div> */}
       <div id="feature">
         <FeatureProduct/>
       </div>
@@ -86,59 +66,13 @@ export default function Shop() {
       </center>
       <section id="feature">
         <FeatureProduct/>
-        {/* <div className="product" onClick={goTo}>
-          <div className="img-box">
-            <img src="images/image7.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image1.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image1.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image1.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div> */}
       </section>
 
-      <center>
-        <h2>Beg collection</h2>
-        <p>Beg Collection New Modren Design</p>
-      </center>
+      <div className="bag-collection-container">
+        <h2>Bag collection</h2>
+        <p>Bag Collection New Modren Design</p>
+      </div>
+
       <section id="feature">
         <div className="product" onClick={goTo}>
           <div className="img-box">
