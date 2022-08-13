@@ -8,11 +8,18 @@ import "./css/Navbar.css";
 export default function Navbar() {
   const toggleNavbar = () => {
     document.querySelector(".header").classList.toggle("active");
-    if (document.querySelector(".header").classList.contains("active")) {
+    if (document.querySelector(".header").classList.contains("active")){
       document.querySelector("html").style.overflow = "hidden";
-    } else {
-      document.querySelector("html").style.overflow = "auto";
+      document.getElementById('wishlist').classList.add("icon-off");
+      document.getElementById('add2cart').classList.add("icon-off");
     }
+    
+    else{
+      document.querySelector("html").style.overflow = "auto";
+      document.getElementById('wishlist').classList.remove("icon-off");
+      document.getElementById('add2cart').classList.remove("icon-off");
+    }
+    
   };
   const navClick = () => {
     document.querySelector(".header").classList.toggle("active");
@@ -66,12 +73,12 @@ export default function Navbar() {
           </div>
         </div>
         <li>
-          <Link to="/wishlist" title="Wishlist" onClick={navClick}>
+          <Link to="/wishlist" title="Wishlist" id="wishlist" onClick={navClick}>
             <i className="fa-solid fa-heart"></i>
           </Link>
         </li>
         <li>
-          <Link to="/cart" title="Add to Cart" onClick={navClick}>
+          <Link to="/cart" title="Add to Cart" id="add2cart" onClick={navClick}>
             <i className="fa-solid fa-cart-shopping"></i>
           </Link>
         </li>

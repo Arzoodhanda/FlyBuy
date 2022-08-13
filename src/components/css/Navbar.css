@@ -172,11 +172,15 @@ div a {
   padding: 0 1rem;
 }
 
+.icon-off {
+  display: none;
+}
+
 @media (max-width: 38em) {
   .mobile-nav {
     display: inline-block;
     z-index: 1;
-    border: 3px solid #212529;
+    /* border: 1px solid gray; */
     border-radius: 0.3rem;
   }
   .navbar {

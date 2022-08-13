@@ -3,15 +3,16 @@ import "./css/Home.css";
 import "./css/Spinner.css";
 import Spinner from "./Spinner";
 import Alert from "./Alert";
+import Carousel from "./Carousel";
 
 export const array = [];
 export const wishlistArr = [];
 
 export default function Home() {
   useEffect(() => {
-    initCards();
+    // initCards();
     fetchUrl();
-  });
+  }, []);
 
   const [loading, setLoading] = useState(true);
   const [alert, setAlert] = useState()
@@ -115,6 +116,7 @@ export default function Home() {
   return (
     <>
       <Alert alert={alert}/>
+
       <div className="tinder">
         <div className="tinder--cards">
           <div className="tinder--card">
@@ -239,6 +241,11 @@ export default function Home() {
             </span>
           </button>
         </div>
+      </div>
+
+      <div className="Home__feature-products">
+        <h1>Feature Products</h1>
+        <Carousel/>
       </div>
     </>
   );

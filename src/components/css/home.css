@@ -16,19 +16,13 @@ body {
 .tinder {
   width: 100%;
   margin-top: 2.5rem;
-  height: 90vh;
+  height: 75vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
-}
-
-@media (max-width: 38rem){
-  .tinder{
-    margin-top: 5px;
-  }
 }
 
 .loaded,
@@ -195,4 +189,22 @@ body {
 #avail{
   color: rgb(0, 179, 255);
   cursor: pointer;
+}
+
+.Home__feature-products {
+  margin: 1rem;
+}
+.Home__feature-products h1{
+  text-align: center;
+  margin: 2rem auto;
+  margin-top: 4rem;
+}
+
+@media (max-width: 38rem){
+  .tinder{
+    margin-top: 2rem;
+  }
+  .tinder--buttons {
+    padding-top: 2rem;
+  }
 }

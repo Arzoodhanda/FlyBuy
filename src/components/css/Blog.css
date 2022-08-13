@@ -67,7 +67,7 @@
 .blog-details a:hover {
   color: #088178;
 }
-h1 {
+#blog h1 {
   padding: 1rem 0;
   color: darkkhaki;
 }
@@ -101,7 +101,7 @@ h1 {
   #blog h1{
     margin-left: 1rem;
   }
-  p {
+  #hero1 p {
     margin: 0.7rem 1rem;
   }
 }

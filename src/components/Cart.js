@@ -7,6 +7,10 @@ import Marquee from "react-fast-marquee";
 import QtyBtn from "./QtyBtn";
 
 export default function Cart() {
+  const removeItem = (e) => {
+    console.log(e);
+  };
+
   return (
     <>
       <section id="hero2">
@@ -27,12 +31,20 @@ export default function Cart() {
               </div>
               <div className="price-qty">
                 <span>Rs 299</span>
-				<QtyBtn/>
+                <QtyBtn />
               </div>
-			  <div className="cart-product-icons">
-				<span><i className="fa-solid fa-heart" title="Save For Later"></i></span>
-				<span><i className="fa-solid fa-trash" title="Remove"></i></span>
-			  </div>
+              <div className="cart-product-icons">
+                <span>
+                  <i className="fa-solid fa-heart" title="Save For Later"></i>
+                </span>
+                <span>
+                  <i
+                    className="fa-solid fa-trash"
+                    title="Remove"
+                    onClick={removeItem}
+                  ></i>
+                </span>
+              </div>
             </div>
           </div>
 
@@ -47,12 +59,16 @@ export default function Cart() {
               </div>
               <div className="price-qty">
                 <span>Rs 299</span>
-				<QtyBtn/>
+                <QtyBtn />
               </div>
-			  <div className="cart-product-icons">
-				<span><i className="fa-solid fa-heart" title="Save For Later"></i></span>
-				<span><i className="fa-solid fa-trash" title="Remove"></i></span>
-			  </div>
+              <div className="cart-product-icons">
+                <span>
+                  <i className="fa-solid fa-heart" title="Save For Later"></i>
+                </span>
+                <span>
+                  <i className="fa-solid fa-trash" title="Remove"></i>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -83,7 +99,7 @@ export default function Cart() {
         </section>
       </div>
       <Marquee className="marquee" gradient={false} direction="right">
-		Thanks for purchasing the product from FlyBuy.
+        Thanks for purchasing the product from FlyBuy.
       </Marquee>
 
       <Footer />

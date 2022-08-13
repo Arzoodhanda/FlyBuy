@@ -6,7 +6,7 @@ export default function Footer() {
     <>
     <section id="newsletter">
       <div>
-        <h2>Sign up for NewsLetters</h2>
+        <span>Sign up for NewsLetters</span>
         <p>Get E - mail updates about our latest shop and <span>special offer</span></p>
       </div>
 

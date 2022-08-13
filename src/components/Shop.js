@@ -1,29 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import "./css/Shop.css";
+import data from "../data.json"
+import FeatureProduct from "./FeatureProduct";
 
-export let name
-export let price
-export let imgSrc
+export let name;
+export let price;
+export let imgSrc;
+
 export default function Shop() {
   let navigate = useNavigate();
 
-  const goTo = (e)=>{
-    name = e.nativeEvent.path[2].childNodes[2].childNodes[0].data
-    price = e.nativeEvent.path[2].childNodes[2].childNodes[1].childNodes[0].data.split(' ')[2]
-    imgSrc = e.target.currentSrc
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
+  const goTo = (e) => {
+    name = e.nativeEvent.path[2].childNodes[2].childNodes[0].data;
+    price =
+      e.nativeEvent.path[2].childNodes[2].childNodes[1].childNodes[0].data.split(
+        " "
+      )[2];
+    imgSrc = e.target.currentSrc;
 
     // window.open(window.location.origin + "/addtocart", '_blank', 'toolbar=0,location=0,menubar=0');
     // window.open(window.location.origin + "/addtocart", '_blank');
 
-    navigate('/addtocart', {params: {
-      name: name,
-      price: price,
-      img: imgSrc,
-    }})
+    navigate("/addtocart", {
+      params: {
+        name: name,
+        price: price,
+        img: imgSrc,
+      },
+    });
     // prints the object
     // console.log(e)
 
@@ -38,7 +49,7 @@ export default function Shop() {
 
     // Prints the image source
     // console.log(e.target.currentSrc)
-  }
+  };
 
   return (
     <>
@@ -54,96 +65,11 @@ export default function Shop() {
         <h2>Featured Products</h2>
         <p>Summer Collection New Modern Design</p>
       </center>
+      {/* <div id="feature">
+
+      </div> */}
       <div id="feature">
-        {/* <div className="product" onclick="window.location.href='sproduct.html';"> */}
-        <div className="product" target="_blank" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image1.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image11.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image22.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image23.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image14.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image15.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
-
-        <div className="product" onClick={goTo}>
-          <p className="time">New</p>
-          <div className="img-box">
-            <img src="images/image25.jpg" alt="1" />
-          </div>
-          <p className="detail">
-            Black top<Link to="">Price: $ 23 /-</Link>
-          </p>
-          <div className="cart">
-            <Link to="#">Add to Cart</Link>
-          </div>
-        </div>
+        <FeatureProduct/>
       </div>
 
       <section className="banner">
@@ -159,8 +85,8 @@ export default function Shop() {
         <p>Summer Collection New Modern Design</p>
       </center>
       <section id="feature">
-      <div className="product" onClick={goTo}>
-          <p className="time">New</p>
+        <FeatureProduct/>
+        {/* <div className="product" onClick={goTo}>
           <div className="img-box">
             <img src="images/image7.jpg" alt="1" />
           </div>
@@ -171,7 +97,6 @@ export default function Shop() {
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-
         <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
@@ -184,7 +109,6 @@ export default function Shop() {
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-
         <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
@@ -197,7 +121,6 @@ export default function Shop() {
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-
         <div className="product" onClick={goTo}>
           <p className="time">New</p>
           <div className="img-box">
@@ -209,7 +132,7 @@ export default function Shop() {
           <div className="cart">
             <Link to="#">Add to Cart</Link>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <center>
@@ -218,7 +141,6 @@ export default function Shop() {
       </center>
       <section id="feature">
         <div className="product" onClick={goTo}>
-          <p className="time">New</p>
           <div className="img-box">
             <img src="images/image9.jpg" alt="1" />
           </div>
@@ -231,7 +153,6 @@ export default function Shop() {
         </div>
 
         <div className="product" onClick={goTo}>
-          <p className="time">New</p>
           <div className="img-box">
             <img src="images/image14.jpg" alt="1" />
           </div>
@@ -244,7 +165,6 @@ export default function Shop() {
         </div>
 
         <div className="product" onClick={goTo}>
-          <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
@@ -257,7 +177,6 @@ export default function Shop() {
         </div>
 
         <div className="product" onClick={goTo}>
-          <p className="time">New</p>
           <div className="img-box">
             <img src="images/image1.jpg" alt="1" />
           </div>
@@ -303,7 +222,7 @@ export default function Shop() {
           <h3>New Trendy Prints</h3>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

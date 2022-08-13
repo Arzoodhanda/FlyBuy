@@ -1,14 +1,18 @@
 import React from 'react'
 import './css/AddToCart.css'
 import Footer from './Footer'
-import { name, price, imgSrc } from './Shop'
+import FeatureProduct from './FeatureProduct'
+// import { name, price, imgSrc } from './Shop'
 
-export default function AddToCart() {
+export default function AddToCart(a) {
+console.log(a)
+
+
   return (
     <>
     <section id="prodetials">
       <div class="single-pro-image">
-          <img src = {imgSrc} width="100%" class="active" alt=""/>
+          <img src = '' width="100%" class="active" alt=""/>
 
         <div id="current-img" class="small-image-group">
           <div class="small-image-col">
@@ -27,8 +31,8 @@ export default function AddToCart() {
 
       <div class="single-pro-details">
         <h4>Shop / Shirt</h4>
-        <h2>{name}</h2>
-        <h3>$ {price}</h3>
+        <h2></h2>
+        <h3>$</h3>
         <div id='selects'>
           <select>
             <option>Select size</option>
