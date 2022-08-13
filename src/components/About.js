@@ -21,10 +21,12 @@ export default function About() {
 <section className="about-header">
       <h2>#Know Us</h2>
       <h3>BEST ONLINE SHOPPING SITE IN INDIA FOR FASHION</h3>
+</section>
+<div className='Know-us-content'>
       <p>Be it clothing, footwear or accessories, FlyBuy offers you the ideal combination of fashion and functionality for men, women and kids. You will realise that the sky is the limit when it comes to the types of outfits that you can purchase for different occasions.</p>
       <p>FlyBuy is one of the best online shopping sites in India which could help transform your living spaces completely. Add colour and personality to your bedrooms with bed linen and curtains. Use smart tableware to impress your guest. Wall decor, clocks, photo frames and artificial plants are sure to breathe life into any corner of your home.</p>
+</div>
 
-</section>
 
 <section className="about-head">
 	<img src="images/pic1.jpg" alt="1"/>

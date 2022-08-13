@@ -1,10 +1,16 @@
 /* .about {
     margin: 2rem 4rem;
 } */
+.about-header h2 {
+    padding-top: 2rem;
+}
 .about-header h3 {
     margin: 1.5rem 0;
 }
-.about-header p {
+.Know-us-content {
+    margin-top: 2rem;
+}
+.Know-us-content p {
     margin: .7rem 3rem;
 }
 
@@ -59,7 +65,7 @@
         padding: 0 2rem;
     }
     .about-head p,
-    .about-header p {
+    .Know-us-content p {
         margin: .7rem 2rem;
     }
 }
@@ -78,7 +84,7 @@
         padding: 0 1rem;
     }
     .about-head p,
-    .about-header p {
+    .Know-us-content p {
         margin: .7rem 1rem;
     }
 }
