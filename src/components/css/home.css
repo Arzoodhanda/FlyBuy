@@ -207,4 +207,8 @@ body {
   .tinder--buttons {
     padding-top: 2rem;
   }
+  .Home__feature-products h1{
+    margin: 1.5rem auto;
+    margin-top: 2rem;
+  } 
 }

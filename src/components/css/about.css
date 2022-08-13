@@ -58,7 +58,8 @@
     .about-head{
         padding: 0 2rem;
     }
-    p {
+    .about-head p,
+    .about-header p {
         margin: .7rem 2rem;
     }
 }
