@@ -48,13 +48,13 @@ Here is the link
 ## Screenshots
 
 ### Home
-![Home Page](public\images\Home.png?raw=true "Home")
+![Home Page](https://raw.githubusercontent.com/sahilkhatkar/FlyBuy/master/public/images/Home.png)
 
 ### Shop
-![Home Page](public\images\Shop.png?raw=true "Shop")
+![Home Page](https://raw.githubusercontent.com/sahilkhatkar/FlyBuy/master/public/images/Shop.png)
 
 ### Cart
-![Home Page](public\images\Cart.png?raw=true "Cart")
+![Home Page](https://raw.githubusercontent.com/sahilkhatkar/FlyBuy/master/public/images/Cart.png)
 
 ## 🛠 Tech Skill(s) Used
 
