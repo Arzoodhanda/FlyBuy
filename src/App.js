@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  // Redirect
 } from "react-router-dom";
 // import Footer from './components/Footer';
 import Shop from './components/Shop';

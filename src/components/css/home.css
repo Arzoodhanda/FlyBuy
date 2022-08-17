@@ -163,7 +163,7 @@ body {
   cursor: pointer;
 }
 
-.price{
+.product-info .price{
   font-family: 'Poppins', sans-serif;
   font-family: 'Radio Canada', sans-serif;
   font-weight: 600;

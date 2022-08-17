@@ -26,8 +26,6 @@ const [viewCard, setViewCard] = useState(5)
     {setViewCard(3)}
   else if((document.body.clientWidth <= 920) && (document.body.clientWidth >= 607))
     {setViewCard(2)}
-  // else if((document.body.clientWidth <= 600) && (document.body.clientWidth >= 0))
-  //   {setViewCard(1)}
   else
     {setViewCard(1)}
 
@@ -44,6 +42,7 @@ const [viewCard, setViewCard] = useState(5)
     };
 
 //  Shuffle function for product shuffle
+
 //   if(data){
 //     data = data
 //      .map(value => ({ value, sort: Math.random() }))
@@ -81,7 +80,7 @@ const [viewCard, setViewCard] = useState(5)
                 <img src={product.img} alt={product.id} />
               </div>
               <p className="detail">
-                {product.name}<Link to="">Price: $ {product.price} /-</Link>
+                {product.name}<p className="price">&#8377; {product.price}/-</p>
               </p>
               <div className="cart">
                 <Link to="">Add to Cart</Link>

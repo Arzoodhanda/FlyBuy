@@ -123,10 +123,12 @@
 	padding: 7px;
 	height: 18%;
 }
-.price{
-	color: navajowhite;
-	background-color: darkred;
+.detail .price{
 	line-height: 20px;
+	/* font-size: 11px; */
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Radio Canada', sans-serif;
+	font-weight: bold;
 }
 .cart{
 	/* position: absolute; */
