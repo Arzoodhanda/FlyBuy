@@ -48,13 +48,13 @@ Here is the link
 ## Screenshots
 
 ### Home
-![Home Page](public\images\Home.png)
+![Home Page](public\images\Home.png?raw=true "Home")
 
 ### Shop
-![Home Page](public\images\Shop.png)
+![Home Page](public\images\Shop.png?raw=true "Shop")
 
 ### Cart
-![Home Page](public\images\Cart.png)
+![Home Page](public\images\Cart.png?raw=true "Cart")
 
 ## 🛠 Tech Skill(s) Used
 
@@ -65,5 +65,5 @@ Here is the link
 - Images -> [Unsplash](https://unsplash.com/)
 ## Authors
 
-- [@Arzoodhanda](https://github.com/Arzoodhanda)
-- [@Sahilkhatkar](https://github.com/sahilkhatkar)
+- [@Arzoo Dhanda](https://github.com/Arzoodhanda)
+- [@Sahil Kumar](https://github.com/sahilkhatkar)
