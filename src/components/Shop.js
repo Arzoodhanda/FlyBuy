@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import "./css/Shop.css";
 import FeatureProduct from "./FeatureProduct";
+import Carousel from "./Carousel";
 
 export default function Shop() {
   let navigate = useNavigate();
@@ -49,7 +50,8 @@ export default function Shop() {
         <p>Summer Collection New Modern Design</p>
       </center>
       <div id="feature">
-        <FeatureProduct/>
+        {/* <FeatureProduct/> */}
+        <Carousel/>
       </div>
 
       <section className="banner">
@@ -65,7 +67,7 @@ export default function Shop() {
         <p>Summer Collection New Modern Design</p>
       </center>
       <section id="feature">
-        <FeatureProduct/>
+        <Carousel/>
       </section>
 
       <div className="bag-collection-container">
@@ -73,7 +75,8 @@ export default function Shop() {
         <p>Bag Collection New Modren Design</p>
       </div>
 
-      <section id="feature">
+      <Carousel/>
+      {/* <section id="feature">
         <div className="product" onClick={goTo}>
           <div className="img-box">
             <img src="images/image9.jpg" alt="1" />
@@ -121,7 +124,7 @@ export default function Shop() {
             <Link to="#">Add to Cart</Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="sm-banner">
         <div className="banner-box">

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/Wishlist.css";
+// import "./css/AddToCart.css";
 import Footer from "./Footer";
 import { wishlistArr } from "./Home";
 
@@ -28,11 +29,13 @@ export default function Wishlist() {
   if(wishlistArr.length===0){
     return (
       <>
-      <div className="about">
-        <h1>Your WishList</h1>
-        <h3>No items are present</h3>
+      <div className="about-empty">
+        <div className="emptyness">
+          <h1>Your WishList</h1>
+          <h3>No items are present</h3>
+        </div>
         <button
-          className="button-85"
+          id="add-more"
           onClick={() => {
             navigate("/");
           }}
