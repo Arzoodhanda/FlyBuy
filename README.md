@@ -2,6 +2,7 @@
 
 ## Description
 
+The goal was create a website for making shopping simple. We was finding product by search and scroll down. But In this website We will see product by our needs and direct show in front no need of search if we swipe left then our product is directly save in wishlist.
 This is a fully-fledged Single page E-commerce web application using ReactJS. The application loads products from a *data.json* file and displays them.
 
 User can go through the products which are shown to them as cards. And have options to like, dislike and add-to-cart the product. Further, can check the liked items in the Wishlist section of the website
