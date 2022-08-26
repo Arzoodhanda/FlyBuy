@@ -59,9 +59,10 @@ Here is the link
 
 ## 🛠 Tech Skill(s) Used
 
-- React JS
+- HTML
+- CSS
+- JavaScript
 - Node.js
-- Express.js
 - Icons -> [Fontawesome](https://fontawesome.com/), [Iconscout](https://iconscout.com/)
 - Images -> [Unsplash](https://unsplash.com/)
 ## Authors
